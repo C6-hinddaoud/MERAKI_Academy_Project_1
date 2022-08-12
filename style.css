@@ -1,7 +1,10 @@
-
+body{
+    
+}
 .grid-container {
     display: grid;
-    grid-template-columns: 100px 100px / auto auto auto;
+    grid-template-columns:auto auto auto;
+     grid-template-columns:1f 1f 1f; 
     background-color: #2196F3;
     padding: 10px;
    
@@ -18,7 +21,9 @@
     /* font-size: 30px;
   text-align: center; */
   }
-  img{
+  .imgdis{
+    /* visibility: hidden; */
+    visibility: hidden;
     height: 150px;
     width: 150px;
   }
