@@ -1,10 +1,15 @@
 const myImg=[{src:"./images/mem1.png",id:1},{src:"./images/mem2.png",id:2},{src:"./images/mem3.png",id:3},{src:"./images/mem1.png",id:1},{src:"./images/mem2.png",id:2},{src:"./images/mem3.png",id:3}]
 const body = document.querySelector("body");
-const divm = document.querySelector("#maindav");
+const divm = document.querySelector(".maindav");
+let inputR = document.createElement("input");
+//divm.append(inputR)
 //load picture
+let lable = document.querySelector("#result");
 
 
 
+  
+//#tryAgin
 
 const comper=(e)=>{
     console.log(e)
@@ -65,12 +70,18 @@ if(arrComper[0].id===arrComper[1].id){
 if(scorWin===3){
    // body.style.background("red")
     console.log("you win")
+    let lable = document.querySelector("#result");
+   let theEnd= document.querySelector(".grid-container ")
+   theEnd.style.display = "none";
+   lable.innerText="you win"
 }
 
 
 }else{
     console.log("Rasha")
     console.log(" score  " +score)
+    const setTimeout=(gaming,1000); //delay is in milliseconds 
+
     arrvisable[0].style.visibility="hidden"
     arrvisable[1].style.visibility="hidden"
     arrvisable=[]
@@ -78,6 +89,10 @@ if(scorWin===3){
     score=score+1
     if(score===6){
         //score=0
+        let lable = document.querySelector("#result");
+        let theEnd= document.querySelector(".grid-container ")
+        theEnd.style.display = "none";
+   lable.innerText="you lose"
         console.log("you lose")
     }
     depth=0
@@ -122,7 +137,12 @@ Newdiv.id="d"+i
 Newdiv.append(img)
 //b.addEventListener("click", gaming);
 }}
+
+
+
 body.onload=loadPic()
+
+
 
 
 let b=document.querySelectorAll(".imgdis")
@@ -148,3 +168,10 @@ let gr=document.querySelector(".grid-container")
 
 gr.addEventListener("click", gaming);
 //b.addEventListener("click", gaming);
+const mynew=  document.querySelector("#tryAgin");
+if(mynew){
+//mynew.addEventListener("click",()=>{
+   // "window.location.reload()"
+
+//})
+}
