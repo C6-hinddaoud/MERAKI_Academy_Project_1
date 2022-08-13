@@ -18,6 +18,7 @@ const comper=(e)=>{
         e.target="hidden"
     }
 }
+let taretArray=[]
 let scorWin=0
 let score=0;
 let arrvisable=[]
@@ -25,15 +26,15 @@ let arrComper=[];
 let  depth=0;
 const gaming=(e)=>{
     //debugger;
-  
+   
         console.log ("555")
         console.log(e)
         let pictoVisb=e.target.childNodes[0]
         let picPath=e.target.img
         console.log (   e.target.childNodes[0])
        // console.log ("mypath" +e.path[0])
-        
-        vis=e.path[0]
+        //not
+        let vis=e.path[0]
         //.path.childNodes childNodes
         let m
     if(vis.style.visibility===""){
@@ -51,20 +52,28 @@ const gaming=(e)=>{
 
 depth=depth+1
 console.log(depth)
+taretArray.push(e.target)
 if(depth===2){
-    
+  
     console.log("hind")
     console.log(arrComper[0].id)
     console.log(arrComper[1].id)
 if(arrComper[0].id===arrComper[1].id){
+   ////// taretArray.push(e.target)
     scorWin=scorWin+1
     score=score+1
     console.log("hindibrahim")
     arrvisable[0].remove()
-
+   // arrvisable[0].style.visibility="visible"
+  // taretArray[0].removeEventListener("click", loadPic);
+    
     arrvisable[1].remove()
+   // arrvisable[1].style.visibility="visible"
+   // taretArray[1].removeEventListener("click", loadPic);
+    console.log("ibrahim")
     arrvisable=[]
     arrComper=[]
+    //taretArray=[]
    depth=0
 
 if(scorWin===3){
@@ -80,11 +89,25 @@ if(scorWin===3){
 }else{
     console.log("Rasha")
     console.log(" score  " +score)
-    const setTimeout=(gaming,1000); //delay is in milliseconds 
+    
 
-    arrvisable[0].style.visibility="hidden"
-    arrvisable[1].style.visibility="hidden"
+      setTimeout(()=>{
+      console.log("why")
+    
+    arrvisable[0].style.visibility="hidden",
+    arrvisable[1].style.visibility="hidden";
     arrvisable=[]
+},500);
+      
+    //  setTimeout(
+    //     arrvisable[0].style.visibility="visible",
+    //     arrvisable[1].style.visibility="visible"
+    // ,1000); //delay is in milliseconds
+
+console.log("test")
+
+
+    
     arrComper=[]
     score=score+1
     if(score===6){

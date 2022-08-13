@@ -31,21 +31,23 @@ body{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+   /* height: 500;
+    width: 500"; */
     gap: 10px;
     align-items: center;
   }
   #result{
-    display: flex;
+   display: flex;
     margin-left: 150px;
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     text-align: center;
     color: rgb(4, 4, 49);
     background-color: rgb(60, 117, 98);
-    font-size: 100px;
+    font-size: 115px;
     border: 3px  rgb(4, 4, 49) double;
     border-radius: 50%;
-
+    align-items: center;
     
   }
   #tryAgin{
