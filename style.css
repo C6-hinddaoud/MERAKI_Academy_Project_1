@@ -23,7 +23,7 @@ body{
   }
   .imgdis{
     /* visibility: hidden; */
-    visibility: hidden;
+    /* visibility: hidden; */
     height: 150px;
     width: 150px;
   }

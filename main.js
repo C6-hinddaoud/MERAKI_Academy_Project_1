@@ -13,6 +13,7 @@ const comper=(e)=>{
         e.target="hidden"
     }
 }
+let scorWin=0
 let score=0;
 let arrvisable=[]
 let arrComper=[];
@@ -51,15 +52,17 @@ if(depth===2){
     console.log(arrComper[0].id)
     console.log(arrComper[1].id)
 if(arrComper[0].id===arrComper[1].id){
+    scorWin=scorWin+1
     score=score+1
     console.log("hindibrahim")
     arrvisable[0].remove()
 
     arrvisable[1].remove()
     arrvisable=[]
-    depth=0
+    arrComper=[]
+   depth=0
 
-if(score===3){
+if(scorWin===3){
    // body.style.background("red")
     console.log("you win")
 }
@@ -101,7 +104,7 @@ img.id=myImg[i].id
 img.className="imgdis"
 img.addEventListener("click",gaming)
 //img.addEventListener("click",comper)
-//img.style.visibility="visible"
+img.style.visibility="hidden"
 //let contDiv=document.createElement("div")
 contDiv.className="grid-container"
  let Newdiv=document.createElement("div")
