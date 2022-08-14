@@ -23,6 +23,7 @@ let scorWin=0
 let score=0;
 let arrvisable=[]
 let arrComper=[];
+
 let  depth=0;
 const gaming=(e)=>{
     //debugger;
@@ -52,33 +53,35 @@ const gaming=(e)=>{
 
 depth=depth+1
 console.log(depth)
-//taretArray.push(e.target)
+taretArray.push(e.target)
+//
 if(depth===2){
   
     console.log("hind")
     console.log(arrComper[0].id)
     console.log(arrComper[1].id)
+   
 if(arrComper[0].id===arrComper[1].id){
-    taretArray.push(e.target)
+   
     scorWin=scorWin+1
     score=score+1
     console.log("hindibrahim")
     
     
-    arrvisable[0].remove()
-    arrvisable[1].remove()
+    //arrvisable[0].remove()
+    //arrvisable[1].remove()
    // arrComper[0].removeEventListener("click", gaming);
   
-   // arrvisable[0].style.visibility="visible"
+    arrvisable[0].style.visibility="visible"
   
-   // taretArray[0].removeEventListener("click", gaming);
+    taretArray[0].removeEventListener("click", gaming);
     
     
-   // arrvisable[1].style.visibility="visible"
+    arrvisable[1].style.visibility="visible"
     
-   // taretArray[1].removeEventListener("click", gaming);
+   // arrComper[1].removeEventListener("click", gaming);
    
-   // taretArray[1].removeEventListener("click", gaming);
+    taretArray[1].removeEventListener("click", gaming);
     console.log("ibrahim")
    arrvisable=[]
     arrComper=[]
@@ -142,14 +145,22 @@ console.log("test")
 //let img;
 //let Newdiv=document.createElement("div")
 
+
+
+
+
 const loadPic=()=>{
+    //let gr=document.querySelectorAll(".grid-item")
     let contDiv=document.createElement("div")   
 for(i=0;i<myImg.length;i++){
+
     let img=document.createElement("img")
 img.src=myImg[i].src 
 img.id=myImg[i].id
 img.className="imgdis"
-img.addEventListener("click",gaming)
+//img.addEventListener("click",gaming)
+
+//gr.addEventListener("click",gaming);
 //img.addEventListener("click",comper)
 img.style.visibility="hidden"
 //let contDiv=document.createElement("div")
@@ -195,10 +206,15 @@ let b=document.querySelectorAll(".imgdis")
 // return m
 // }
 //let b=document.querySelector(".imgdis")
-let gr=document.querySelector(".grid-container")
+
 //let h=document.querySelector("#d2")
 
-gr.addEventListener("click", gaming);
+
+const gr=document.querySelectorAll(".grid-item")
+gr.forEach((gr)=>{
+gr.addEventListener("click",gaming);
+});
+
 //b.addEventListener("click", gaming);
 const mynew=  document.querySelector("#tryAgin");
 if(mynew){
