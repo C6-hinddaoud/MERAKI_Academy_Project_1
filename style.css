@@ -42,11 +42,11 @@ body{
     width: 400px;
     height: 300px;
     text-align: center;
-    color: rgb(4, 4, 49);
-    background-color: rgb(89 99 182);
+    color: rgba(255, 255, 255, 0.8);
+    background-color:  #2196F3;
     font-size: 115px;
     border: 3px  rgb(4, 4, 49) double;
-    border-radius: 50%;
+    /* //border-radius: 50%; */
     align-items: center;
     padding: 30px;
     
@@ -57,11 +57,11 @@ body{
     width: 100px;
     height:100px;
     text-align: center;
-    color: rgb(4, 4, 49);
-    background-color:  rgb(89 99 182);
+    color:  rgba(255, 255, 255, 0.8);
+    background-color:  #2196F3;
     font-size: 20px;
     border: 3px  rgb(4, 4, 49) double;
-    border-radius: 50%;
+    /* //border-radius: 50%; */
 
 
   }
