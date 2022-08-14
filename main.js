@@ -52,28 +52,37 @@ const gaming=(e)=>{
 
 depth=depth+1
 console.log(depth)
-taretArray.push(e.target)
+//taretArray.push(e.target)
 if(depth===2){
   
     console.log("hind")
     console.log(arrComper[0].id)
     console.log(arrComper[1].id)
 if(arrComper[0].id===arrComper[1].id){
-   ////// taretArray.push(e.target)
+    taretArray.push(e.target)
     scorWin=scorWin+1
     score=score+1
     console.log("hindibrahim")
-    arrvisable[0].remove()
-   // arrvisable[0].style.visibility="visible"
-  // taretArray[0].removeEventListener("click", loadPic);
     
+    
+    arrvisable[0].remove()
     arrvisable[1].remove()
+   // arrComper[0].removeEventListener("click", gaming);
+  
+   // arrvisable[0].style.visibility="visible"
+  
+   // taretArray[0].removeEventListener("click", gaming);
+    
+    
    // arrvisable[1].style.visibility="visible"
-   // taretArray[1].removeEventListener("click", loadPic);
+    
+   // taretArray[1].removeEventListener("click", gaming);
+   
+   // taretArray[1].removeEventListener("click", gaming);
     console.log("ibrahim")
-    arrvisable=[]
+   arrvisable=[]
     arrComper=[]
-    //taretArray=[]
+    taretArray=[]
    depth=0
 
 if(scorWin===3){
