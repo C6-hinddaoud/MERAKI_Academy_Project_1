@@ -1,4 +1,47 @@
-const myImg = [{ src: "./images/mem2.png", id: 2 }, { src: "./images/mem1.png", id: 1 }, { src: "./images/mem3.png", id: 3 }, { src: "./images/mem1.png", id: 1 }, { src: "./images/mem3.png", id: 3 }, { src: "./images/mem2.png", id: 2 }]
+const myImg = [{ src: "./images/mem2.png", id: 2 }, { src: "./images/mem1.png", id: 1 }, { src: "./images/mem3.png", id: 3 }, { src: "./images/mem1.png", id: 1 }, { src: "./images/mem3.png", id: 3 }, { src: "./images/mem2.png", id: 2 }
+, { src: "./images/mem4.png", id: 4 }
+, { src: "./images/mem4.png", id: 4 }
+, { src: "./images/mem5.png", id: 5 }
+, { src: "./images/mem5.png", id: 5 }
+, { src: "./images/mem6.png", id: 6 }
+, { src: "./images/mem6.png", id: 6 }
+
+
+
+
+
+]
+
+
+
+
+
+
+var timesRun = 0;
+var interval = setInterval(function(){
+    timesRun += 1;
+    let element = document.querySelector("#demo");
+    element.innerText =`you have ${60-timesRun} second` 
+    if(timesRun === 60){
+        clearInterval(interval);
+        let lable = document.querySelector("#result");
+                let theEnd = document.querySelector(".grid-container ")
+                theEnd.style.display = "none";
+                let hidscore = document.querySelector("#score")
+                hidscore.style.display = "none";
+                
+                lable.innerText = "time is over"
+
+    }
+    
+    
+}, 1000); 
+
+
+
+
+
+
 const body = document.querySelector("body");
 const divm = document.querySelector(".maindav");
 let inputR = document.createElement("input");
@@ -107,12 +150,18 @@ const gaming = (e) => {
             taretArray = []
             depth = 0
 
-            if (scorWin === 3) {
+            if (scorWin === 6) {
                 // body.style.background("red")
                 let lable = document.querySelector("#result");
                 let theEnd = document.querySelector(".grid-container ")
                 theEnd.style.display = "none";
                 lable.innerText = "you win"
+
+
+                
+                let DEMO = document.querySelector("#demo")
+                DEMO.style.display = "none";
+                clearInterval(interval);
             }
 
 
@@ -135,14 +184,29 @@ const gaming = (e) => {
 
 
             arrComper = []
+            let Chance = document.querySelector("#score")
             score = score + 1
-            console.log( "score"+ score)
-            if (score === 6) {
+            
+                Chance.innerText = `you have ${13-score} failed attempts`
+            // }
+             
+            // let Chance = document.querySelector("#score")
+            // sqar=
+            // Chance.innerText = `you have ${sqar}`
+            // score
+            // console.log( "score "+ sqar)
+            if (score === 13) {
                 //score=0
                 let lable = document.querySelector("#result");
                 let theEnd = document.querySelector(".grid-container ")
                 theEnd.style.display = "none";
                 lable.innerText = "you lose"
+
+
+
+                let DEMO = document.querySelector("#demo")
+                DEMO.style.display = "none";
+                clearInterval(interval);
                
             }
             depth = 0
